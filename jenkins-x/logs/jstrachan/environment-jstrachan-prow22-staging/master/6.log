@@ -1,0 +1,8 @@
+Step: build-step-credential-initializer:
+
+Step: build-step-git-source:
+
+Step: build-step-apply:
+
+Modified file /workspace/env/Chart.yaml to set the chart to version 6
+Adding missing Helm repo: jenkins-x http://chartmuseum.jenkins-x.io
