@@ -1,0 +1,37 @@
+Step: build-step-credential-initializer:
+
+Step: build-step-git-source:
+
+Step: build-step-apply:
+
+Modified file /workspace/env/Chart.yaml to set the chart to version 3
+Adding missing Helm repo: jenkins-x http://chartmuseum.jenkins-x.io
+Successfully added Helm repository jenkins-x.
+Adding missing Helm repo: releases http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository releases.
+Applying helm chart at . as release name jx to namespace jx-staging
+no Vault found and no file 'secrets.yaml' exists in directory '.'
+Using values files: values.yaml
+Applying generated chart . YAML via kubectl in dir: /tmp/helm-template-workdir-459769276/jx/output
+role.rbac.authorization.k8s.io/cleanup created
+rolebinding.rbac.authorization.k8s.io/cleanup created
+serviceaccount/cleanup created
+deployment.extensions/jx-demo198 created
+release.jenkins.io/demo198-0.0.3 created
+service/demo198 created
+deployment.extensions/jx-demo200 created
+release.jenkins.io/demo200-0.0.1 created
+service/demo200 created
+deployment.extensions/jx-demo201 created
+release.jenkins.io/demo201-0.0.1 created
+service/demo201 created
+configmap/exposecontroller created
+role.rbac.authorization.k8s.io/expose created
+rolebinding.rbac.authorization.k8s.io/expose created
+serviceaccount/expose created
+Applying Helm hook post-upgrade YAML via kubectl in file: /tmp/helm-template-workdir-459769276/jx/helmHooks/env/charts/expose/templates/job.yaml
+job.batch/expose created
+Waiting for helm post-upgrade hook Job expose to complete before removing it
+Deleting helm hook sources from file: /tmp/helm-template-workdir-459769276/jx/helmHooks/env/charts/expose/templates/job.yaml
+job.batch "expose" deleted
+Removing Kubernetes resources from older releases using selector: jenkins.io/chart-release=jx,jenkins.io/version!=3
